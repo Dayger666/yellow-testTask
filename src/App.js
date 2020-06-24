@@ -1,28 +1,22 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Route} from "react-router-dom";
+import HeaderContainer from "./components/Header/HeaderContainer";
+import HomeContainer from "./components/Home/HomeContainer";
+import JogsContainer from "./components/Jogs/JogsContainer";
 
-class App extends Component {
-  render() {
+
+let App = () => {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <div className='wrapper'>
+            <HeaderContainer/>
+            <div className='content'>
+                <Route path="/" render={() => <HomeContainer/>} exact />
+                <Route path="/jogs" component={JogsContainer} exact />
+            </div>
+        </div>
     );
-  }
-}
+
+};
+
 
 export default App;

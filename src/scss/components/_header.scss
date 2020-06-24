@@ -1,0 +1,56 @@
+@import '../variables';
+
+.header{
+  background-color: $apple-green;
+  height: 100px;
+
+  .container{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo{
+    padding-left: 37px;
+    display: flex;
+    img{
+
+    }
+  }
+  &__nav-items{
+    display: flex;
+    align-items: center;
+  }
+  &__nav-item{
+    font-family: SFUIText, serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left:35px;
+    cursor: pointer;
+    text-decoration: none;
+    a {
+      text-decoration: none;
+      color:$background;
+    }
+    &:hover{
+      border-bottom:solid 1.5px #ffffff;
+    }
+  }
+}
+.item{
+  &_f{
+    height: 39px;
+    width:39px;
+    margin-left:45px;
+    margin-right: 25px;
+    display: flex;
+    justify-content: center;
+    &:hover{
+      border: none;
+      transform: scale(1.2);
+      .active {
+        border-radius: 8px;
+      }
+    }
+  }
+}

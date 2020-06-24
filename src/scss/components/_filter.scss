@@ -1,0 +1,32 @@
+@import '../variables';
+
+.filter{
+  height: 55px;
+  width: 100%;
+  background-color: $gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__item{
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    font-family: SFUIText, serif;
+    font-size: 13px;
+    color:$strongGray;
+  }
+  &__container{
+    margin-left: 10px;
+  }
+  &__datepicker{
+    cursor: pointer;
+    text-align: center;
+    width: 80px;
+    height: 21px;
+    border-radius: 11px;
+    border: solid 1px #979797;
+    &:focus{
+  outline: none;
+    }
+  }
+}
