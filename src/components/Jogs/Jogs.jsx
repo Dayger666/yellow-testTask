@@ -3,6 +3,7 @@ import DatePicker from "react-datepicker/es";
 import 'react-datepicker/dist/react-datepicker.css'
 import Jog from "./Jog/Jog";
 import addSvg from '../../assets/images/add.svg';
+import sadSmile from '../../assets/images/sad-rounded-square-emoticon.svg';
 import {NavLink} from "react-router-dom";
 
 const Jogs = ({getJogsThunkCreator, jogs, filterToggle}) => {
@@ -12,14 +13,14 @@ const Jogs = ({getJogsThunkCreator, jogs, filterToggle}) => {
         getJogsThunkCreator();
     }, []);
     let sortedElements;
-    if (startDate !== '' && endDate !== ''&&filterToggle) {
-        sortedElements=jogs.filter((jog)=>startDate<=(jog.date+"000")&&endDate>=(jog.date+"000"));
-    }
-    else{
-        sortedElements=jogs;
+    if (startDate !== '' && endDate !== '' && filterToggle) {
+        sortedElements = jogs.filter((jog) => startDate <= (jog.date + "000") && endDate >= (jog.date + "000"));
+    } else {
+        sortedElements = jogs;
     }
     let jogsElements = sortedElements.slice(-10).map((jog) => <Jog key={jog.id} date={jog.date} distance={jog.distance}
-                                                           time={jog.time}/>).reverse();
+                                                                   time={jog.time}/>).reverse();
+    console.log(jogsElements.length);
     return (
         <div className='container'>
             <div className='content__jogs'>
@@ -53,15 +54,28 @@ const Jogs = ({getJogsThunkCreator, jogs, filterToggle}) => {
                         </div>
                     </div> : null
                 }
-                <div className='content__jogs-list'>
-                    {jogsElements}
+                {jogsElements.length !== 0 ? <>
+                    <div className='content__jogs-list'>
+                        {jogsElements}
+                    </div>
+                    <NavLink to={'/addJog'}>
+                        <div className='content__add-btn'>
+                            <img src={addSvg} alt="addBtn"/>
+                        </div>
+                    </NavLink></> : <div className='content__empty'>
+                    <div className='content__nothing-block'>
+                        <img src={sadSmile} alt="sad-smile"/>
+                        <div>Nothing is there
+                        </div>
+                    </div>
+                    <div className='content__create-jog'>
+                        <NavLink to={'/addJog'}>
+                        <button>Create your jog first</button>
+                        </NavLink>
+                    </div>
                 </div>
+                }
             </div>
-            <NavLink to={'/addJog'}>
-                <div className='content__add-btn'>
-                    <img src={addSvg} alt="addBtn"/>
-                </div>
-            </NavLink>
         </div>
     )
 };

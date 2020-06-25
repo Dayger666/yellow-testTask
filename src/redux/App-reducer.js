@@ -3,11 +3,13 @@ import {jogsAPI} from "../api/api";
 const SET_IS_AUTH = 'SET-IS-AUTH';
 const SET_JOGS = 'SET-JOGS';
 const SET_FILTER_TOGGLE='SET-FILTER-TOGGLE';
+const TOGGLE_IS_FETCHING='TOGGLE-IS-FETCHING';
 
 let initialState = {
     isAuth: false,
     jogs: [],
     filterToggle:true,
+    isFetching:false,
 };
 const appReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -25,6 +27,11 @@ const appReducer = (state = initialState, action) => {
             return {
                 ...state,
                 filterToggle:!state.filterToggle,
+            };
+        case TOGGLE_IS_FETCHING:
+            return{
+                ...state,
+                isFetching:action.isFetching,
             };
         default:
             return state;
@@ -49,7 +56,12 @@ export let setFilterToggle = () => {
         type: SET_FILTER_TOGGLE,
     }
 };
-
+export let setIsFetching=(value)=>{
+    return {
+        type:TOGGLE_IS_FETCHING,
+        isFetching:value,
+    }
+};
 export let beginningApp = () => {
     return (dispatch) => {
       return jogsAPI.getToken().then((res) => {
@@ -61,8 +73,10 @@ export let beginningApp = () => {
 };
 export let getJogsThunkCreator = () => {
     return (dispatch) => {
+        dispatch(setIsFetching(true));
         jogsAPI.getJogsList().then((res) => {
             dispatch(setJogs(res.jogs));
+            dispatch(setIsFetching(false))
         })
     }
 };

@@ -1,13 +1,13 @@
 @import '../variables';
 
-.form{
+.form {
   min-height: calc(100vh - 200px);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  &__window{
+  &__window {
     background-color: $apple-green;
     width: 453px;
     height: 329px;
@@ -16,65 +16,76 @@
     flex-direction: column;
     align-items: center;
     @media (max-width: 768px) {
+      border-radius: 25px;
       & {
         margin-top: 30px;
         margin-right: 30px;
         margin-left: 30px;
-      padding-bottom: 40px;
+        padding-bottom: 40px;
       }
     }
 
   }
-  &__cancel-btn{
+
+  &__cancel-btn {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     margin: 15px 50px 35px 0;
-    img{
+
+    img {
       cursor: pointer;
     }
+
     @media (max-width: 768px) {
+      opacity: 0.9;
       & {
-  margin-bottom: 15px;
+        margin-bottom: 15px;
       }
     }
   }
+
   @media (max-width: 768px) {
     &__items {
-     display: flex;
+      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
   }
-  &__item{
+
+  &__item {
     display: flex;
     margin-bottom: 25px;
     @media (max-width: 768px) {
       & {
-     flex-direction: column;
+        flex-direction: column;
       }
     }
   }
-  &__text{
-      width: 90px;
-      font-family: SFUIText, serif;
-      font-size: 16px;
+
+  &__text {
+    width: 90px;
+    font-family: SFUIText, serif;
+    font-size: 16px;
     @media (max-width: 768px) {
       & {
         padding-bottom: 5px;
       }
     }
   }
-  &__field{
+
+  &__field {
     width: 180px;
     height: 18px;
     border-radius: 7px;
     border: solid 1px #979797;
     background-color: #ffffff;
-    &:focus{
+
+    &:focus {
       outline: none;
     }
+
     @media (max-width: 768px) {
       & {
         width: 200px;
@@ -82,7 +93,8 @@
       }
     }
   }
-  &__save-btn{
+
+  &__save-btn {
     cursor: pointer;
     margin-top: 20px;
     background-color: $apple-green;
@@ -90,14 +102,16 @@
     height: 42px;
     border-radius: 25.2px;
     border: solid 2px #ffffff;
-    color:white;
+    color: white;
     font-family: SFUIText, serif;
     font-size: 12.6px;
     font-weight: bold;
     outline: none;
-    &:hover{
+
+    &:hover {
       opacity: 0.8;
     }
+
     @media (max-width: 768px) {
       & {
         margin-top: 0px;

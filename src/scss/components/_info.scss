@@ -1,0 +1,51 @@
+@import '../variables';
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    margin-top: 70px;
+    max-width: 658px;
+    @media (max-width: 768px) {
+      & {
+        margin-top: 20px;
+        margin-left: 15px;
+        max-width: 290px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: SFUIText, serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: $apple-green;
+    margin-bottom: 15px;
+    @media (max-width: 768px) {
+      & {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__text {
+    font-family: SFUIText, serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: gray;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    @media (max-width: 768px) {
+      & {
+        font-size: 11px;
+        line-height: 24px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
