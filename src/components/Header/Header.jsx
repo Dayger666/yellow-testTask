@@ -16,9 +16,9 @@ const Header = (props) => {
                 </div>
                 {props.isAuth ?
                     <div className='header__nav-items'>
-                        <div className='header__nav-item'><NavLink to={'/jogs'}>JOGS </NavLink></div>
-                            <div className='header__nav-item'><NavLink to={'/info'}>INFO</NavLink></div>
-                            <div className='header__nav-item'><NavLink to={'/contactUS'}>CONTACT US </NavLink></div>
+                        <div className='header__nav-item'><NavLink activeClassName='header__active' to={'/jogs'}>JOGS </NavLink></div>
+                            <div className='header__nav-item'><NavLink activeClassName='header__active' to={'/info'}>INFO</NavLink></div>
+                            <div className='header__nav-item'><NavLink activeClassName='header__active' to={'/contactUS'}>CONTACT US </NavLink></div>
                         <div onClick={() => {
                             props.setFilterToggle();
                         }} className='header__nav-item item item_f'>{props.filterToggle ?

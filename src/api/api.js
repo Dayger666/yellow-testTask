@@ -19,12 +19,9 @@ export let jogsAPI = {
             return res.data.response;
     })
     },
-    login: (email, password, rememberMe, captcha) => {
-        return instance.post(`auth/login`, {email, password, rememberMe})
+    addJog: (date, time, distance) => {
+        return instance.post(`data/jog`, {date, time, distance})
     },
-    logOut: () => {
-        return instance.delete(`auth/login`);
-    }
 
 };
 

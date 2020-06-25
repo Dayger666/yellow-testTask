@@ -4,6 +4,7 @@ import {Field, reduxForm} from "redux-form";
 import DatePicker from "react-datepicker/es";
 import cancelSvg from '../../../assets/images/cancel.svg';
 import 'react-datepicker/dist/react-datepicker.css'
+import {NavLink} from "react-router-dom";
 const AddJogWindow = (props) => {
     const [startDate, setStartDate] = useState('');
     console.log('12');
@@ -13,7 +14,7 @@ const AddJogWindow = (props) => {
                 props.reset();
                 props.onSubmit(startDate, values);
             })}>
-                <div className='form__cancel-btn'><img src={cancelSvg} alt="closeBtn"/></div>
+                <div className='form__cancel-btn'><NavLink to={'/jogs'}><img src={cancelSvg} alt="closeBtn"/></NavLink></div>
                 <div className='form__items'>
                 <div className='form__item'>
                     <div className='form__text'>Distance</div>

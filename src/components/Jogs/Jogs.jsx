@@ -12,6 +12,7 @@ const Jogs = ({getJogsThunkCreator,jogs,filterToggle}) => {
         getJogsThunkCreator();
     }, []);
     const jogsElements=jogs.slice(-10).map((jog)=><Jog key={jog.id} date={jog.date} distance={jog.distance} time={jog.time}/>).reverse();
+
     return (
         <div className='container'>
             <div className='content__jogs'>

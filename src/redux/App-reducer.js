@@ -66,4 +66,11 @@ export let getJogsThunkCreator = () => {
         })
     }
 };
+export let addJogThunkCreator = (date, time, distance) => {
+    return (dispatch) => {
+        jogsAPI.addJog(date, time, distance).then((res) => {
+            console.log(res);
+        })
+    }
+};
 export default appReducer;

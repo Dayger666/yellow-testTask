@@ -2,6 +2,7 @@
 
 .header{
   background-color: $apple-green;
+  width: 100%;
   height: 100px;
 
   .container{
@@ -35,6 +36,9 @@
     &:hover{
       border-bottom:solid 1.5px #ffffff;
     }
+  }
+  &__active{
+    border-bottom:solid 1.5px #ffffff;
   }
 }
 .item{
