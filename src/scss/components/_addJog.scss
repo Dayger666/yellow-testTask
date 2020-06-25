@@ -1,0 +1,65 @@
+@import '../variables';
+
+.form{
+  min-height: calc(100vh - 200px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__window{
+    background-color: $apple-green;
+    width: 453px;
+    height: 329px;
+    border-radius: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__cancel-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 50px 35px 0;
+    img{
+      cursor: pointer;
+    }
+  }
+  &__item{
+    display: flex;
+    margin-bottom: 25px;
+
+  }
+  &__text{
+      width: 90px;
+      font-family: SFUIText, serif;
+      font-size: 16px;
+
+  }
+  &__field{
+    width: 180px;
+    height: 18px;
+    border-radius: 7px;
+    border: solid 1px #979797;
+    background-color: #ffffff;
+    &:focus{
+      outline: none;
+    }
+  }
+  &__save-btn{
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: $apple-green;
+    width: 320px;
+    height: 42px;
+    border-radius: 25.2px;
+    border: solid 2px #ffffff;
+    color:white;
+    font-family: SFUIText, serif;
+    font-size: 12.6px;
+    font-weight: bold;
+    outline: none;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+}

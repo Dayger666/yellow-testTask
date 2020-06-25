@@ -3,12 +3,11 @@ import DatePicker from "react-datepicker/es";
 import 'react-datepicker/dist/react-datepicker.css'
 import Jog from "./Jog/Jog";
 import addSvg from '../../assets/images/add.svg';
+import {NavLink} from "react-router-dom";
 
 const Jogs = ({getJogsThunkCreator,jogs,filterToggle}) => {
-    console.log(jogs)
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
-    console.log(endDate);
     useEffect(() => {
         getJogsThunkCreator();
     }, []);
@@ -50,9 +49,11 @@ const Jogs = ({getJogsThunkCreator,jogs,filterToggle}) => {
                     {jogsElements}
                 </div>
             </div>
+            <NavLink to={'/addJog'}>
             <div className='content__add-btn'>
                 <img src={addSvg} alt="addBtn"/>
             </div>
+            </NavLink>
         </div>
     )
 };

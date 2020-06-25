@@ -5,7 +5,6 @@ const Jog = ({date,distance,time}) => {
     let speed = distance / time;
     let convSpeed = Math.floor(speed * 100) / 100;
     let newDate=new Date(+(date+'000')).toLocaleDateString();
-    console.log(newDate)
     return (
         <div className='jog'>
             <img src={logo} alt="speedLogo"/>

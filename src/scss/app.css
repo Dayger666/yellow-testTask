@@ -85,6 +85,58 @@
 .item_date {
   font-weight: 500; }
 
+.form {
+  min-height: calc(100vh - 200px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .form__window {
+    background-color: #7ed321;
+    width: 453px;
+    height: 329px;
+    border-radius: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .form__cancel-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 50px 35px 0; }
+    .form__cancel-btn img {
+      cursor: pointer; }
+  .form__item {
+    display: flex;
+    margin-bottom: 25px; }
+  .form__text {
+    width: 90px;
+    font-family: SFUIText, serif;
+    font-size: 16px; }
+  .form__field {
+    width: 180px;
+    height: 18px;
+    border-radius: 7px;
+    border: solid 1px #979797;
+    background-color: #ffffff; }
+    .form__field:focus {
+      outline: none; }
+  .form__save-btn {
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: #7ed321;
+    width: 320px;
+    height: 42px;
+    border-radius: 25.2px;
+    border: solid 2px #ffffff;
+    color: white;
+    font-family: SFUIText, serif;
+    font-size: 12.6px;
+    font-weight: bold;
+    outline: none; }
+    .form__save-btn:hover {
+      opacity: 0.8; }
+
 @font-face {
   font-family: SFUIText;
   src: url("./fonts/SF-UI-Text-Regular.ttf") format("truetype");
