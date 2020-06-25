@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="151306b8-39f6-437c-aacb-7f1824b83ce5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scss/components/_info.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Common/Preloader.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Info/Info.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Info/Info.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Jogs/Jogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Jogs/Jogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Jogs/JogsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Jogs/JogsContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Jogs/addJogWindow/AddJogWindowContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Jogs/addJogWindow/AddJogWindowContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/App-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/App-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/.sass-cache/08a2db8168ad1f457aaf618c8f24fb3ec89d1775/_all.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/.sass-cache/08a2db8168ad1f457aaf618c8f24fb3ec89d1775/_all.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/.sass-cache/08a2db8168ad1f457aaf618c8f24fb3ec89d1775/_filter.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/.sass-cache/08a2db8168ad1f457aaf618c8f24fb3ec89d1775/_filter.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/.sass-cache/c28f7fdaf945346c5ca6c8f3d094646b0910f7d7/app.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/.sass-cache/c28f7fdaf945346c5ca6c8f3d094646b0910f7d7/app.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/app.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/app.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_addJog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_addJog.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_all.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_all.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_filter.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593107517223</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added info page">
+      <created>1593114078958</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1593114078958</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,7 +113,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added redux form to addJogWindow" />
     <MESSAGE value="added burger menu, and responsive layout with media queries" />
-    <option name="LAST_COMMIT_MESSAGE" value="added burger menu, and responsive layout with media queries" />
+    <MESSAGE value="added info page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added info page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="527" y="203" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593040277296">
@@ -116,10 +125,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1593007615913" />
-    <state x="345" y="0" key="CommitChangelistDialog2" timestamp="1593107514525">
+    <state x="345" y="0" key="CommitChangelistDialog2" timestamp="1593114076696">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="345" y="0" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1593107514525" />
+    <state x="345" y="0" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1593114076696" />
     <state x="406" y="186" width="723" height="486" key="EditFileWatcherDialog" timestamp="1592928569716">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

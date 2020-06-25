@@ -112,7 +112,7 @@
 
 .filter {
   height: 55px;
-  width: 100%;
+  width: 100vw;
   background-color: #eaeaea;
   display: flex;
   justify-content: center;
@@ -122,7 +122,7 @@
     display: flex;
     align-items: center;
     font-family: SFUIText, serif;
-    font-size: 13px;
+    font-size: 12px;
     color: #747474; }
     @media (max-width: 768px) {
       .filter__item {
@@ -141,7 +141,7 @@
     border: solid 1px #979797; }
     @media (max-width: 768px) {
       .filter__datepicker {
-        width: 60px;
+        width: 70px;
         height: 25px; } }
     .filter__datepicker:focus {
       outline: none; }
@@ -310,6 +310,14 @@ body {
   height: 100%;
   margin: 0 auto; }
 
+.content__jogs-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+.content__pagination {
+  margin-top: 5px;
+  margin-bottom: 5px; }
 .content__first-page-wrapper {
   min-height: calc(100vh - 200px);
   width: 100%;
@@ -357,6 +365,14 @@ body {
     .content__in-btn button {
       border-color: #e990f9;
       color: #e990f9; } }
+.content__preloader {
+  width: 150px;
+  height: 150px;
+  margin-top: 50px; }
+  @media (max-width: 768px) {
+    .content__preloader {
+      width: 100px;
+      height: 100px; } }
 .content__jogs-list {
   display: flex;
   flex-direction: column;
@@ -368,6 +384,10 @@ body {
   cursor: pointer; }
   .content__add-btn:hover {
     transform: scale(1.2); }
+  @media (max-width: 768px) {
+    .content__add-btn img {
+      width: 45px;
+      height: 45px; } }
 .content__empty {
   min-height: calc(100vh - 200px);
   display: flex;

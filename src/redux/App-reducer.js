@@ -2,6 +2,7 @@ import {jogsAPI} from "../api/api";
 
 const SET_IS_AUTH = 'SET-IS-AUTH';
 const SET_JOGS = 'SET-JOGS';
+const SET_JOGS_COUNT = 'SET-JOGS-COUNT';
 const SET_FILTER_TOGGLE='SET-FILTER-TOGGLE';
 const TOGGLE_IS_FETCHING='TOGGLE-IS-FETCHING';
 
@@ -10,6 +11,8 @@ let initialState = {
     jogs: [],
     filterToggle:true,
     isFetching:false,
+    totalJogsCount:0,
+    pageSize:10,
 };
 const appReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -22,6 +25,11 @@ const appReducer = (state = initialState, action) => {
             return {
                 ...state,
                 jogs: [...action.data],
+            };
+        case SET_JOGS_COUNT:
+            return {
+                ...state,
+                totalJogsCount: action.data,
             };
         case SET_FILTER_TOGGLE:
             return {
@@ -51,6 +59,12 @@ export let setJogs = (jogs) => {
         data: jogs,
     }
 };
+export let setJogsCount = (count) => {
+    return {
+        type: SET_JOGS_COUNT,
+        data: count,
+    }
+};
 export let setFilterToggle = () => {
     return {
         type: SET_FILTER_TOGGLE,
@@ -76,6 +90,7 @@ export let getJogsThunkCreator = () => {
         dispatch(setIsFetching(true));
         jogsAPI.getJogsList().then((res) => {
             dispatch(setJogs(res.jogs));
+             dispatch(setJogsCount(res.jogs.length));
             dispatch(setIsFetching(false))
         })
     }

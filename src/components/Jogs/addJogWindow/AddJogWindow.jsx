@@ -7,7 +7,6 @@ import 'react-datepicker/dist/react-datepicker.css'
 import {NavLink} from "react-router-dom";
 const AddJogWindow = (props) => {
     const [startDate, setStartDate] = useState('');
-    console.log('12');
     return (
         <div className='form'>
             <form className='form__window' onSubmit={props.handleSubmit((values) => {

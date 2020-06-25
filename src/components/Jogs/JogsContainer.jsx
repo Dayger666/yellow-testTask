@@ -7,16 +7,19 @@ import {useEffect} from "react";
 
 
 const JogsContainer = (props) => {
-    if(!props.isAuth){
+    if (!props.isAuth) {
         return <Redirect to={'/let-me-in'}/>
     }
-    return <Jogs getJogsThunkCreator={props.getJogsThunkCreator} jogs={props.jogs} filterToggle={props.filterToggle} isFetching={props.isFetching}/>
+    return <Jogs getJogsThunkCreator={props.getJogsThunkCreator} jogs={props.jogs} filterToggle={props.filterToggle}
+                 isFetching={props.isFetching} pageSize={props.pageSize} totalJogsCount={props.totalJogsCount}/>
 
 };
 let mapStateToProps = (state) => {
     return {
         isAuth: state.appLoad.isAuth,
-        jogs:state.appLoad.jogs,
+        jogs: state.appLoad.jogs,
+        totalJogsCount: state.appLoad.totalJogsCount,
+        pageSize: state.appLoad.pageSize,
         filterToggle: state.appLoad.filterToggle,
         isFetching: state.appLoad.isFetching,
     }

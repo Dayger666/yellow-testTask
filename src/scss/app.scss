@@ -21,10 +21,16 @@ body {
 }
 
 .content {
-  .container {
-
+  &__jogs-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
-
+&__pagination{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
   &__first-page-wrapper {
     min-height: calc(100vh - 200px);
     width: 100%;
@@ -96,7 +102,19 @@ body {
   }
 
   &__jogs {
+  }
 
+  &__preloader {
+    width: 150px;
+    height: 150px;
+    margin-top: 50px;
+    @media (max-width: 768px) {
+      & {
+        width: 100px;
+        height: 100px;
+
+      }
+    }
   }
 
   &__jogs-list {
@@ -114,56 +132,72 @@ body {
     &:hover {
       transform: scale(1.2);
     }
+
+    @media (max-width: 768px) {
+      img {
+        width: 45px;
+        height: 45px;
+
+      }
+    }
   }
-  &__empty{
+
+  &__empty {
     min-height: calc(100vh - 200px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  &__nothing-block{
+
+  &__nothing-block {
     margin-bottom: 70px;
-    img{
+
+    img {
       margin-top: 30px;
       margin-bottom: 60px;
     }
+
     @media (max-width: 768px) {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       margin-bottom: 150px;
-      img{
+      img {
         width: 80px;
         height: 80px;
         margin-top: 20px;
         margin-bottom: 20px;
       }
     }
-    div{
+
+    div {
       font-family: SFUIText, serif;
       font-size: 22px;
-      color:$strongGray;
+      color: $strongGray;
       opacity: 0.7;
     }
 
   }
-  &__create-jog{
-    button{
+
+  &__create-jog {
+    button {
       background: transparent;
       width: 220px;
       height: 45px;
       border-radius: 36px;
       border: solid 3px #e990f9;
-      color:$purple;
+      color: $purple;
       font-family: SFUIText, serif;
       font-size: 18px;
       font-weight: bold;
       cursor: pointer;
+
       &:hover {
         background-color: #f8f8f8;
       }
+
       &:focus {
         outline: none;
       }

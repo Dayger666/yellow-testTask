@@ -6,7 +6,6 @@ import {withRouter} from "react-router-dom";
 import {addJogThunkCreator} from "../../../redux/App-reducer";
 
 let AddJogWindowContainer = (props) => {
-    console.log('123');
     const onSubmit = (startDate, values) => {
         props.addJogThunkCreator(new Date(startDate).toLocaleDateString(),values.distance,values.time);
         props.history.push('/jogs');
