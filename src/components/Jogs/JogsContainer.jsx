@@ -8,7 +8,7 @@ import {useEffect} from "react";
 
 const JogsContainer = (props) => {
     if(!props.isAuth){
-        return <Redirect to={'/'}/>
+        return <Redirect to={'/let-me-in'}/>
     }
     return <Jogs getJogsThunkCreator={props.getJogsThunkCreator} jogs={props.jogs} filterToggle={props.filterToggle}/>
 

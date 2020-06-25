@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Route} from "react-router-dom";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import HomeContainer from "./components/Home/HomeContainer";
@@ -11,7 +11,7 @@ let App = () => {
         <div className='wrapper'>
             <HeaderContainer/>
             <div className='content'>
-                <Route path="/" render={() => <HomeContainer/>} exact />
+                <Route path="/let-me-in" render={() => <HomeContainer/>} exact />
                 <Route path="/jogs" component={JogsContainer} exact />
                 <Route path="/addJog" render={() => <AddJogWindowContainer/>} />
             </div>

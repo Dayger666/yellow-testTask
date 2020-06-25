@@ -5,18 +5,25 @@ import Jog from "./Jog/Jog";
 import addSvg from '../../assets/images/add.svg';
 import {NavLink} from "react-router-dom";
 
-const Jogs = ({getJogsThunkCreator,jogs,filterToggle}) => {
+const Jogs = ({getJogsThunkCreator, jogs, filterToggle}) => {
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
     useEffect(() => {
         getJogsThunkCreator();
     }, []);
-    const jogsElements=jogs.slice(-10).map((jog)=><Jog key={jog.id} date={jog.date} distance={jog.distance} time={jog.time}/>).reverse();
-
+    let sortedElements;
+    if (startDate !== '' && endDate !== ''&&filterToggle) {
+        sortedElements=jogs.filter((jog)=>startDate<=(jog.date+"000")&&endDate>=(jog.date+"000"));
+    }
+    else{
+        sortedElements=jogs;
+    }
+    let jogsElements = sortedElements.slice(-10).map((jog) => <Jog key={jog.id} date={jog.date} distance={jog.distance}
+                                                           time={jog.time}/>).reverse();
     return (
         <div className='container'>
             <div className='content__jogs'>
-                {filterToggle?
+                {filterToggle ?
                     <div className='filter'>
                         <div className='filter__item'>
                             <div>Date from</div>
@@ -44,16 +51,16 @@ const Jogs = ({getJogsThunkCreator,jogs,filterToggle}) => {
                                 dateFormat="dd.MM.yyyy"
                             /></div>
                         </div>
-                    </div>:null
+                    </div> : null
                 }
                 <div className='content__jogs-list'>
                     {jogsElements}
                 </div>
             </div>
             <NavLink to={'/addJog'}>
-            <div className='content__add-btn'>
-                <img src={addSvg} alt="addBtn"/>
-            </div>
+                <div className='content__add-btn'>
+                    <img src={addSvg} alt="addBtn"/>
+                </div>
             </NavLink>
         </div>
     )

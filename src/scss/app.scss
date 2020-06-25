@@ -34,7 +34,7 @@ body {
   }
 
   &__first-page {
-    background-color: $purple;
+    background: $purple;
     width: 453px;
     height: 329px;
     border-radius: 44px;
@@ -42,17 +42,31 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 768px) {
+      & {
+        background: white;
+      }
+    }
+
   }
 
   &__bearIMG {
+    background: url('../assets/images/bear-face.svg') no-repeat center;
     padding-top: 65px;
+    width: 210px;
+    height: 200px;
+    @media (max-width: 768px) {
+      & {
+        background: white url('../assets/images/bearFace.png') no-repeat center;
+      }
+    }
   }
 
   &__in-btn {
     padding-bottom: 25px;
 
     button {
-      background-color: $purple;
+      background-color: transparent;
       width: 131px;
       height: 50px;
       border-radius: 36px;
@@ -71,23 +85,34 @@ body {
         outline: none;
       }
     }
+
+    @media (max-width: 768px) {
+      button {
+        border-color: $purple;
+        color: $purple;
+
+      }
+    }
   }
 
   &__jogs {
 
   }
-  &__jogs-list{
+
+  &__jogs-list {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-&__add-btn{
-  position: fixed;
-  right: 3%;
-  bottom: 3%;
-  cursor: pointer;
-  &:hover{
-    transform: scale(1.2);
+
+  &__add-btn {
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
-}
 }

@@ -1,6 +1,7 @@
 @import '../variables';
 
 .filter{
+
   height: 55px;
   width: 100%;
   background-color: $gray;
@@ -14,9 +15,19 @@
     font-family: SFUIText, serif;
     font-size: 13px;
     color:$strongGray;
+    @media (max-width: 768px) {
+      & {
+        margin: 15px;
+      }
+    }
   }
   &__container{
     margin-left: 10px;
+    @media (max-width: 768px) {
+      & {
+        margin-left: 5px;
+      }
+    }
   }
   &__datepicker{
     cursor: pointer;
@@ -25,6 +36,12 @@
     height: 21px;
     border-radius: 11px;
     border: solid 1px #979797;
+    @media (max-width: 768px) {
+      & {
+        width: 60px;
+        height: 25px;
+      }
+    }
     &:focus{
   outline: none;
     }

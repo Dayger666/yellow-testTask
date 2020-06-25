@@ -10,7 +10,6 @@ const Home = (props) => {
             <div className='content__first-page-wrapper'>
             <div className='content__first-page'>
                 <div className='content__bearIMG'>
-                    <img src={bearSvg} alt="bear"/>
                 </div>
                 <div className='content__in-btn'>
                     <button onClick={props.onClick}>Let me in</button>
