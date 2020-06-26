@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="151306b8-39f6-437c-aacb-7f1824b83ce5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Jogs/JogsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Jogs/JogsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Jogs/addJogWindow/AddJogWindow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Jogs/addJogWindow/AddJogWindow.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593131121313</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="some fixes">
+      <created>1593131537150</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1593131537150</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +147,8 @@
     <MESSAGE value="added pagination" />
     <MESSAGE value="added pagination (material-ui)" />
     <MESSAGE value="added some api tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some api tests" />
+    <MESSAGE value="some fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="527" y="203" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593040277296">
@@ -157,10 +159,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1593007615913" />
-    <state x="345" y="0" key="CommitChangelistDialog2" timestamp="1593131119646">
+    <state x="345" y="0" key="CommitChangelistDialog2" timestamp="1593131535112">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="345" y="0" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1593131119646" />
+    <state x="345" y="0" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1593131535112" />
     <state x="406" y="186" width="723" height="486" key="EditFileWatcherDialog" timestamp="1592928569716">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -189,6 +191,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="56" key="SettingsEditor/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1592928571654" />
+    <state x="361" y="142" key="Vcs.Push.Dialog.v2" timestamp="1593131641884">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1593131641884" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1593006966381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
