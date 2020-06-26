@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import Jogs from "./Jogs";
 import {getJogsThunkCreator} from "../../redux/App-reducer";
 import {Redirect} from "react-router-dom";
-import {useEffect} from "react";
+
 
 
 const JogsContainer = (props) => {

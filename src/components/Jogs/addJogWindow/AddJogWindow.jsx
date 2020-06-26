@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import logo from '../../../assets/images/icon.svg';
 import {Field, reduxForm} from "redux-form";
 import DatePicker from "react-datepicker/es";
 import cancelSvg from '../../../assets/images/cancel.svg';

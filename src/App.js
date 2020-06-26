@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Route} from "react-router-dom";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import HomeContainer from "./components/Home/HomeContainer";

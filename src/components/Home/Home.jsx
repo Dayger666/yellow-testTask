@@ -1,7 +1,5 @@
 import React from "react";
-import bearSvg from '../../assets/images/bear-face.svg';
-import {authAPI} from "../../api/api";
-import {NavLink, Redirect} from "react-router-dom";
+
 
 const Home = (props) => {
 
