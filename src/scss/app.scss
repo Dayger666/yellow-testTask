@@ -48,11 +48,12 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    @media (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       & {
         background: white;
       }
     }
+
 
   }
 
@@ -96,7 +97,9 @@ body {
       button {
         border-color: $purple;
         color: $purple;
-
+        &:hover {
+          background-color: #f8f8f8;
+        }
       }
     }
   }
@@ -126,7 +129,7 @@ body {
   &__add-btn {
     position: fixed;
     right: 3%;
-    bottom: 3%;
+    bottom: 6%;
     cursor: pointer;
 
     &:hover {

@@ -333,7 +333,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center; }
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     .content__first-page {
       background: white; } }
 .content__bearIMG {
@@ -364,7 +364,9 @@ body {
   @media (max-width: 768px) {
     .content__in-btn button {
       border-color: #e990f9;
-      color: #e990f9; } }
+      color: #e990f9; }
+      .content__in-btn button:hover {
+        background-color: #f8f8f8; } }
 .content__preloader {
   width: 150px;
   height: 150px;
@@ -380,7 +382,7 @@ body {
 .content__add-btn {
   position: fixed;
   right: 3%;
-  bottom: 3%;
+  bottom: 6%;
   cursor: pointer; }
   .content__add-btn:hover {
     transform: scale(1.2); }

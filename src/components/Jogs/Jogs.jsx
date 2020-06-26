@@ -93,7 +93,7 @@ const Jogs = ({getJogsThunkCreator, jogs, filterToggle, isFetching, pageSize, to
                     </>
                     }
                 </div>
-                <div className='content__pagination'><Pagination onChange={(event, value) => {
+                <div className='content__pagination'><Pagination size="small" onChange={(event, value) => {
                     setCurrentPage(value)
                 }} count={pagesCount}/></div>
             </div>
